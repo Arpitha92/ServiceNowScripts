@@ -1,0 +1,14 @@
+//var sysid = a2826bf03710200044e0bfc8bcbe5ded,f2826bf03710200044e0bfc8bcbe5df2;
+
+var arr = ['a2826bf03710200044e0bfc8bcbe5ded','f2826bf03710200044e0bfc8bcbe5df2'];
+var arr2 = [];
+
+var gr = new GlideRecord('sys_user');
+gr.addEncodedQuery('sys_idINa2826bf03710200044e0bfc8bcbe5ded,f2826bf03710200044e0bfc8bcbe5df2');
+gr.query();
+
+while(gr.next()){
+arr2.push(gr.getValue('user_name'));
+}
+
+gs.print(arr2);
