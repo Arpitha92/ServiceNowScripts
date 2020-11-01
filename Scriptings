@@ -1,0 +1,9 @@
+var sysId = 'f2826bf03710200044e0bfc8bcbe5df2';
+
+var gr = new GlideRecord('sys_user');
+gr.addQuery('sys_id', sysId);
+gr.query();
+
+if(gr.next()){
+gs.print(gr.user_name);
+}
